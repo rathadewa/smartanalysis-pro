@@ -1,9 +1,8 @@
 import { Elysia } from "elysia";
-import { indexRoutes } from "./routes/index";
-import { dashboardRoutes } from "./routes/dashboard";
+import { loginRoutes, dashboardRoutes } from "./routes/index";
 
 const app = new Elysia()
-  .use(indexRoutes)
+  .use(loginRoutes)
   .use(dashboardRoutes)
   .listen(3000);
 
